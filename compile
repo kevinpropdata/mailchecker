@@ -1,0 +1,6 @@
+# A make file to generate mac and linux binaries
+
+env GOOS=linux GOARCH=amd64  go build  -o bin/mailchecker main.go
+env GOOS=darwin GOARCH=amd64  go build -o bin/mailchecker_mac main.go
+chmod +x bin/mailchecker
+chmod +x bin/mailchecker_mac
